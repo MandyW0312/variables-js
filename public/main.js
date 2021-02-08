@@ -160,11 +160,27 @@ function main() {
 
   const average = sumTotal / numbers.length
 
+  let sumOfOdd = 0
+  for (let index = 0; index < numbers.length; index++) {
+    if (numbers[index] % 2 != 0) {
+      sumOfOdd += numbers[index]
+    }
+  }
+
+  let countOfEven = 0
+  for (let index = 0; index < numbers.length; index++) {
+    if (numbers[index] % 2 == 0) {
+      countOfEven += numbers[index]
+    }
+  }
+
   const statistics = {
     smallest: smallest,
     largest: largest,
     sum: sumTotal,
     average: average,
+    sumOfOdd: sumOfOdd,
+    countOfEven: countOfEven,
   }
 }
 
